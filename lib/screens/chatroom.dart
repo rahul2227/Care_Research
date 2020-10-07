@@ -12,7 +12,6 @@ class ChatRoom extends StatefulWidget {
 
 class _ChatRoomState extends State<ChatRoom> {
   Stream chatRooms;
-
   Widget chatRoomsList() {
     return StreamBuilder(
       stream: chatRooms,
@@ -86,7 +85,7 @@ class ChatRoomsTile extends StatelessWidget {
                     )));
       },
       child: Container(
-        color: Colors.blueAccent[200],
+        color: Color(0xff556b77),
         padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
         child: Row(
           children: [

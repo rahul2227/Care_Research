@@ -79,7 +79,7 @@ class _ChatState extends State<Chat> {
               width: MediaQuery.of(context).size.width,
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-                color: Colors.blueGrey[100],
+                color: Color(0xFF435058),
                 child: Row(
                   children: [
                     Expanded(
@@ -89,7 +89,7 @@ class _ChatState extends State<Chat> {
                       decoration: InputDecoration(
                           hintText: "Message ...",
                           hintStyle: TextStyle(
-                            color: Colors.blueAccent[100],
+                            color: Color(0xFFe0e1dd),
                             fontSize: 16,
                           ),
                           border: InputBorder.none),
@@ -159,9 +159,10 @@ class MessageTile extends StatelessWidget {
                   bottomRight: Radius.circular(23)),
           gradient: LinearGradient(
               colors: sendByMe
-                  ? [const Color(0xff007EF4), const Color(0xff2A75BC)]
+                  // ? [const Color(0xff007EF4), const Color(0xff2A75BC)]
+                  ? [const Color(0xff2e6171), const Color(0xff556f7a)]
                   // : [const Color(0x1AFFFFFF), const Color(0x1AFFFFFF)],
-                  : [Colors.blueGrey[100], Colors.black]),
+                  : [Color(0xff294966), Color(0xff556b77)]),
         ),
         child: Text(message,
             textAlign: TextAlign.start,

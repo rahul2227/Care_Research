@@ -4,9 +4,9 @@ import 'package:research_app/helper/authenticate.dart';
 import 'package:research_app/helper/helperfunctions.dart';
 import 'package:research_app/screens/Home.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -56,7 +56,9 @@ class _MyAppState extends State<MyApp> {
       title: 'CareCube',
       debugShowCheckedModeBanner: false,
       home: userIsLoggedIn != null
-          ? userIsLoggedIn ? Home() : Authenticate()
+          ? userIsLoggedIn
+              ? Home()
+              : Authenticate()
           : Container(
               child: Center(
                 child: Authenticate(),

@@ -27,7 +27,7 @@ class _SpecState extends State<Spec> {
             icon: Image.asset('assets/images/brain.jpg'),
             iconSize: 30,
             onPressed: () {},
-            color: Colors.green,
+            color: Colors.black,
           )
         ],
       ),
@@ -39,12 +39,12 @@ class _SpecState extends State<Spec> {
               SizedBox(height: 10),
               Flexible(
                 child: Container(
-                  height: 130,
+                  height: 100,
                   color: Colors.white,
                   child: Row(children: <Widget>[
                     Container(
-                      height: 120,
-                      width: 120,
+                      height: 100,
+                      width: 25,
                       decoration: BoxDecoration(
                           image: DecorationImage(
                         image: ExactAssetImage('images/brain.jpg'),
@@ -65,10 +65,10 @@ class _SpecState extends State<Spec> {
                                       child: Text(
                                         'DataSet 1 ',
                                         style: TextStyle(
-                                          fontSize: 18.0,
+                                          fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.green,
-                                          decoration: TextDecoration.underline,
+                                          color: Colors.black,
+                                          // decoration: TextDecoration.underline,
                                         ),
                                       )))
                             ],
@@ -91,9 +91,9 @@ class _SpecState extends State<Spec> {
                 ),
               ),
               Container(
-                height: 3,
+                height: 2,
                 width: 30,
-                color: Colors.green,
+                color: Colors.blueGrey[300],
               )
             ],
           ),

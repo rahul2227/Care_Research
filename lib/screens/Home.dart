@@ -60,10 +60,9 @@ class Home extends StatelessWidget {
                                 child: Text(
                                   'Title: BrainComputer Interface ',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 20.0,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.green,
-                                    decoration: TextDecoration.underline,
+                                    color: Colors.black,
                                   ),
                                 ),
                               ),
@@ -89,9 +88,9 @@ class Home extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 3,
+                height: 2,
                 width: MediaQuery.of(context).size.width * 0.75,
-                color: Colors.green,
+                color: Colors.blueGrey[300],
               ),
             ],
           ),
