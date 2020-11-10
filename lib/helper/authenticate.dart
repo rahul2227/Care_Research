@@ -1,6 +1,6 @@
+import 'package:cubic/screens/login.dart';
+import 'package:cubic/screens/reg.dart';
 import 'package:flutter/material.dart';
-import 'package:research_app/screens/login.dart';
-import 'package:research_app/screens/signup.dart';
 
 class Authenticate extends StatefulWidget {
   @override
@@ -19,9 +19,9 @@ class _AuthenticateState extends State<Authenticate> {
   @override
   Widget build(BuildContext context) {
     if (showSignIn) {
-      return LoginPage(toggleView);
+      return MyLogin(toggleView);
     } else {
-      return SignupPage(toggleView);
+      return MyReg(toggleView);
     }
   }
 }

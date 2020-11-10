@@ -1,12 +1,12 @@
-import 'package:firebase_core/firebase_core.dart';
+import 'package:cubic/helper/authenticate.dart';
+import 'package:cubic/helper/helperfunctions.dart';
+import 'package:cubic/screens/homecombo.dart';
 import 'package:flutter/material.dart';
-import 'package:research_app/helper/authenticate.dart';
-import 'package:research_app/helper/helperfunctions.dart';
-import 'package:research_app/screens/Home.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -56,9 +56,7 @@ class _MyAppState extends State<MyApp> {
       title: 'CareCube',
       debugShowCheckedModeBanner: false,
       home: userIsLoggedIn != null
-          ? userIsLoggedIn
-              ? Home()
-              : Authenticate()
+          ? userIsLoggedIn ? HomeCombo() : Authenticate()
           : Container(
               child: Center(
                 child: Authenticate(),

@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 class DatabaseMethods {
   Future<void> addUserInfo(userData) async {
@@ -59,7 +58,6 @@ class DatabaseMethods {
   }
 
   getUserChats(String itIsMyName) async {
-    await Firebase.initializeApp();
     return await FirebaseFirestore.instance
         .collection("chatRoom")
         .where('users', arrayContains: itIsMyName)
